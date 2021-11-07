@@ -1,0 +1,45 @@
+ View the data from CloudShell using get-parameters
+To view the db-endpoint, which is stored in String format, run the following command:
+
+aws ssm get-parameters --names /whiz-app/dev-env/db-endpoint
+
+
+To view the db-password, which is stored in SecureString format, run the following command:
+
+aws ssm get-parameters --names /whiz-app/dev-env/db-password
+
+
+
+Oh, looks like this is encrypted, let's decrypt it. To view the db-password, in decrypted format, run the following command:
+
+aws ssm get-parameters --names /whiz-app/dev-env/db-password --with-decryption
+
+
+
+To view both db-endpoint and db-password with a single command, run the below CLI command:
+
+aws ssm get-parameters --names /whiz-app/dev-env/db-endpoint /whiz-app/dev-env/db-password
+
+
+
+Oh, Looks like db-password is still in encrypted format, let's decrypt it with --with-decryption parameter
+
+aws ssm get-parameters --names /whiz-app/dev-env/db-endpoint /whiz-app/dev-env/db-password --with-decryption
+
+ View the data from CloudShell CLI using get-parameters-by-path
+To view both the parameters of the development environment, run the following command:
+
+aws ssm get-parameters-by-path --path /whiz-app/dev-env
+
+
+we  can decrypt the above SecureString by adding --with-decryption parameter
+
+aws ssm get-parameters-by-path --path /whiz-app/dev-env --with-decryption
+
+Alternatively, we can view the parameters of /whiz-app path by adding --recursive parameter.
+
+aws ssm get-parameters-by-path --path /whiz-app --recursive --with-decryption
+
+
+
+
