@@ -1,0 +1,187 @@
+Preparing your terminal...
+[cloudshell-user@ip-10-1-123-53 ~]$ Try these commands to get started:
+aws help  or  aws <command> help  or  aws <command> --cli-auto-prompt
+[cloudshell-user@ip-10-1-123-53 ~]$ aws ssm get-parameters --names /whiz-app/dev-env/db-endpoint
+{
+    "Parameters": [
+        {
+            "Name": "/whiz-app/dev-env/db-endpoint",
+            "Type": "String",
+            "Value": "mysqlinstance1-k82h.123456789012.us-east-1.rds.amazonaws.com:3306",
+            "Version": 1,
+            "LastModifiedDate": "2021-11-07T11:29:32.424000+00:00",
+            "ARN": "arn:aws:ssm:us-east-1:802007754612:parameter/whiz-app/dev-env/db-endpoint",
+            "DataType": "text"
+        }
+    ],
+    "InvalidParameters": []
+}
+[cloudshell-user@ip-10-1-123-53 ~]$ aws ssm get-parameters --names /whiz-app/dev-env/db-password
+{
+    "Parameters": [
+        {
+            "Name": "/whiz-app/dev-env/db-password",
+            "Type": "SecureString",
+            "Value": "AQICAHjkKUgan7IQnwakSEjVyZ7G21IEGTH2ZiKuljZymtYsbgG4uVtA8cm452Dbb+eZMbVAAAAAbTBrBgkqhkiG9w0BBwagXjBcAgEAMFcGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMQD5hEvr7dORa7au7AgEQgCrvjPr+7xqDUdVrbXneKbq9bTj1dLqbiujMhrxY0CyC3/nEmJrzEo4fiUw=",
+            "Version": 1,
+            "LastModifiedDate": "2021-11-07T11:32:22.363000+00:00",
+            "ARN": "arn:aws:ssm:us-east-1:802007754612:parameter/whiz-app/dev-env/db-password",
+            "DataType": "text"
+        }
+    ],
+    "InvalidParameters": []
+}
+[cloudshell-user@ip-10-1-123-53 ~]$ aws ssm get-parameters --names /whiz-app/dev-env/db-password --with-decryption
+{
+    "Parameters": [
+        {
+            "Name": "/whiz-app/dev-env/db-password",
+            "Type": "SecureString",
+            "Value": "Eh9x6E!RGHa8zYM",
+            "Version": 1,
+            "LastModifiedDate": "2021-11-07T11:32:22.363000+00:00",
+            "ARN": "arn:aws:ssm:us-east-1:802007754612:parameter/whiz-app/dev-env/db-password",
+            "DataType": "text"
+        }
+    ],
+    "InvalidParameters": []
+}
+[cloudshell-user@ip-10-1-123-53 ~]$ aws ssm get-parameters --names /whiz-app/dev-env/db-endpoint /whiz-app/dev-env/db-password
+{
+    "Parameters": [
+        {
+            "Name": "/whiz-app/dev-env/db-endpoint",
+            "Type": "String",
+            "Value": "mysqlinstance1-k82h.123456789012.us-east-1.rds.amazonaws.com:3306",
+            "Version": 1,
+            "LastModifiedDate": "2021-11-07T11:29:32.424000+00:00",
+            "ARN": "arn:aws:ssm:us-east-1:802007754612:parameter/whiz-app/dev-env/db-endpoint",
+            "DataType": "text"
+        },
+        {
+            "Name": "/whiz-app/dev-env/db-password",
+            "Type": "SecureString",
+            "Value": "AQICAHjkKUgan7IQnwakSEjVyZ7G21IEGTH2ZiKuljZymtYsbgG4uVtA8cm452Dbb+eZMbVAAAAAbTBrBgkqhkiG9w0BBwagXjBcAgEAMFcGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMQD5hEvr7dORa7au7AgEQgCrvjPr+7xqDUdVrbXneKbq9bTj1dLqbiujMhrxY0CyC3/nEmJrzEo4fiUw=",
+            "Version": 1,
+            "LastModifiedDate": "2021-11-07T11:32:22.363000+00:00",
+            "ARN": "arn:aws:ssm:us-east-1:802007754612:parameter/whiz-app/dev-env/db-password",
+            "DataType": "text"
+        }
+    ],
+    "InvalidParameters": []
+}
+[cloudshell-user@ip-10-1-123-53 ~]$ Preparing your terminal...
+bash: Preparing: command not found
+[cloudshell-user@ip-10-1-123-53 ~]$ [cloudshell-user@ip-10-1-123-53 ~]$ Try these commands to get started:
+bash: [cloudshell-user@ip-10-1-123-53: command not found
+[cloudshell-user@ip-10-1-123-53 ~]$ aws help  or  aws <command> help  or  aws <command> --cli-auto-prompt
+bash: command: No such file or directory
+[cloudshell-user@ip-10-1-123-53 ~]$ [cloudshell-user@ip-10-1-123-53 ~]$ aws ssm get-parameters --names /whiz-app/dev-env/db-endpoint
+bash: [cloudshell-user@ip-10-1-123-53: command not found
+[cloudshell-user@ip-10-1-123-53 ~]$ {
+>     "Parameters": [
+>         {
+>             "Name": "/whiz-app/dev-env/db-endpoint",
+>             "Type": "String",
+>             "Value": "mysqlinstance1-k82h.123456789012.us-east-1.rds.amazonaws.com:3306",
+>             "Version": 1,
+>             "LastModifiedDate": "2021-11-07T11:29:32.424000+00:00",
+>             "ARN": "arn:aws:ssm:us-east-1:802007754612:parameter/whiz-app/dev-env/db-endpoint",
+>             "DataType": "text"
+>         }
+>     ],
+>     "InvalidParameters": []
+> }
+bash: Parameters:: command not found
+bash: Name:: command not found
+bash: Type:: command not found
+bash: Value:: command not found
+bash: Version:: command not found
+bash: LastModifiedDate:: command not found
+bash: ARN:: command not found
+bash: DataType:: command not found
+bash: ],: command not found
+bash: InvalidParameters:: command not found
+[cloudshell-user@ip-10-1-123-53 ~]$ [cloudshell-user@ip-10-1-123-53 ~]$ aws ssm get-parameters --names /whiz-app/dev-env/db-password
+bash: [cloudshell-user@ip-10-1-123-53: command not found
+[cloudshell-user@ip-10-1-123-53 ~]$ {
+>     "Parameters": [
+>         {
+>             "Name": "/whiz-app/dev-env/db-password",
+>             "Type": "SecureString",
+>             "Value": "AQICAHjkKUgan7IQnwakSEjVyZ7G21IEGTH2ZiKuljZymtYsbgG4uVtA8cm452Dbb+eZMbVAAAAAbTBrBgkqhkiG9w0BBwagXjBcAgEAMFcGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMQD5hEvr7dORa7au7AgEQgCrvjPr+7xqDUdVrbXneKbq9bTj1dLqbiujMhrxY0CyC3/nEmJrzEo4fiUw=",
+>             "Version": 1,
+>             "LastModifiedDate": "2021-11-07T11:32:22.363000+00:00",
+>             "ARN": "arn:aws:ssm:us-east-1:802007754612:parameter/whiz-app/dev-env/db-password",
+>             "DataType": "text"
+>         }
+>     ],
+>     "InvalidParameters": []
+> }
+bash: Parameters:: command not found
+bash: Name:: command not found
+bash: Type:: command not found
+bash: Value:: command not found
+bash: Version:: command not found
+bash: LastModifiedDate:: command not found
+bash: ARN:: command not found
+bash: DataType:: command not found
+bash: ],: command not found
+bash: InvalidParameters:: command not found
+[cloudshell-user@ip-10-1-123-53 ~]$ [cloudshell-user@ip-10-1-123-53 ~]$ aws ssm get-parameters --names /whiz-app/dev-env/db-password --with-decryption
+bash: [cloudshell-user@ip-10-1-123-53: command not found
+[cloudshell-user@ip-10-1-123-53 ~]$ {
+>     "Parameters": [
+>         {
+>             "Name": "/whiz-app/dev-env/db-password",
+>             "Type": "SecureString",
+>             "Value": "Eh9x6E!RGHa8zYM",
+bash: !RGHa8zYM",: event not found
+>             "Version": 1,
+>             "LastModifiedDate": "2021-11-07T11:32:22.363000+00:00",
+>             "ARN": "arn:aws:ssm:us-east-1:802007754612:parameter/whiz-app/dev-env/db-password",
+>             "DataType": "text"
+>         }
+>     ],
+>     "InvalidParameters": []
+> }
+bash: Parameters:: command not found
+bash: Name:: command not found
+bash: Type:: command not found
+bash: Version:: command not found
+bash: LastModifiedDate:: command not found
+bash: ARN:: command not found
+bash: DataType:: command not found
+bash: ],: command not found
+bash: InvalidParameters:: command not found
+[cloudshell-user@ip-10-1-123-53 ~]$ [cloudshell-user@ip-10-1-123-53 ~]$ aws ssm get-parameters --names /whiz-app/dev-env/db-endpoint /whiz-app/dev-env/db-password
+bash: [cloudshell-user@ip-10-1-123-53: command not found
+[cloudshell-user@ip-10-1-123-53 ~]$ {
+>     "Parameters": [
+>         {
+>             "Name": "/whiz-app/dev-env/db-endpoint",
+>             "Type": "String",
+>             "Value": "mysqlinstance1-k82h.123456789012.us-east-1.rds.amazonaws.com:3306",
+>             "Version": 1,
+>             "LastModifiedDate": "2021-11-07T11:29:32.424000+00:00",
+>             "ARN": "arn:aws:ssm:us-east-1:802007754612:parameter/whiz-app/dev-env/db-endpoint",
+>             "DataType": "text"
+>         },
+>         {
+>             "Name": "/whiz-app/dev-env/db-password",
+>             "Type": "SecureString",
+>             "Value": "AQICAHjkKUgan7IQnwakSEjVyZ7G21IEGTH2ZiKuljZymtYsbgG4uVtA8cm452Dbb+eZMbVAAAAAbTBrBgkqhkiG9w0BBwagXjBcAgEAMFcGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMQD5hEvr7dORa7au7AgEQgCrvjPr+7xqDUdVrbXneKbq9bTj1dLqbiujMhrxY0CyC3/nEmJrzEo4fiUw=",
+>             "Version": 1,
+>             "LastModifiedDate": "2021-11-07T11:32:22.363000+00:00",
+>             "ARN": "arn:aws:ssm:us-east-1:802007754612:parameter/whiz-app/dev-env/db-password",
+>             "DataType": "text"
+>         }
+>     ],
+>     "InvalidParameters": []
+> }
+> [cloudshell-user@ip-10-1-123-53 ~]$ 
+> 
+> 
+> aws ssm get-parameters-by-path --path /whiz-app/dev-env
+> 
+> 
